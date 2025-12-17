@@ -1,0 +1,114 @@
+{
+  "info": {
+    "_postman_id": "fc97462f-e16f-4040-85c0-cddb355c6524",
+    "name": "Animals",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Получить животных",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "5b09de8d-a133-4a88-a127-b89a8f16f36a",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "e8c26542-2256-4e2c-bd71-2e93861cb6f9",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 500ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "11d3fc5d-887e-49cd-a103-b94648eeb8d4",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://smallapi.home.kartushin.su/animals",
+          "protocol": "https",
+          "host": [
+            "smallapi",
+            "home",
+            "kartushin",
+            "su"
+          ],
+          "path": [
+            "animals"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Создать животное",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "31d164b5-efae-48a0-8178-f5180dbf43e0",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "416ba546-5dac-473c-bca5-c270830424ca",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 500ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "4e654fcd-9b11-4b40-9c51-2288eecdafab",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"string\",\r\n  \"species\": \"string\",\r\n  \"age\": 5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://smallapi.home.kartushin.su/animals",
+          "protocol": "https",
+          "host": [
+            "smallapi",
+            "home",
+            "kartushin",
+            "su"
+          ],
+          "path": [
+            "animals"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -25,11 +25,11 @@
           "script": {
             "id": "e8c26542-2256-4e2c-bd71-2e93861cb6f9",
             "exec": [
-              "pm.test(\"Status code is 200\", function () {\r",
+              "pm.test(\"Get Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
               "});\r",
               "\r",
-              "pm.test(\"Response time is less than 500ms\", function () {\r",
+              "pm.test(\"Get Response time is less than 500ms\", function () {\r",
               "    pm.expect(pm.response.responseTime).to.be.below(500);\r",
               "});"
             ],
@@ -75,11 +75,11 @@
           "script": {
             "id": "416ba546-5dac-473c-bca5-c270830424ca",
             "exec": [
-              "pm.test(\"Status code is 200\", function () {\r",
+              "pm.test(\"Post Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
               "});\r",
               "\r",
-              "pm.test(\"Response time is less than 500ms\", function () {\r",
+              "pm.test(\"Post Response time is less than 500ms\", function () {\r",
               "    pm.expect(pm.response.responseTime).to.be.below(500);\r",
               "});"
             ],

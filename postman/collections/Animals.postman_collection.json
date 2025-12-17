@@ -15,7 +15,9 @@
             "exec": [
               ""
             ],
-            "type": "text/javascript"
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
           }
         },
         {
@@ -31,13 +33,16 @@
               "    pm.expect(pm.response.responseTime).to.be.below(500);\r",
               "});"
             ],
-            "type": "text/javascript"
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
           }
         }
       ],
       "id": "11d3fc5d-887e-49cd-a103-b94648eeb8d4",
       "request": {
         "method": "GET",
+        "header": [],
         "url": {
           "raw": "{{BaseUrl}}/animals",
           "host": [
@@ -47,7 +52,8 @@
             "animals"
           ]
         }
-      }
+      },
+      "response": []
     },
     {
       "name": "Создать животное",
@@ -59,7 +65,9 @@
             "exec": [
               ""
             ],
-            "type": "text/javascript"
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
           }
         },
         {
@@ -75,16 +83,19 @@
               "    pm.expect(pm.response.responseTime).to.be.below(500);\r",
               "});"
             ],
-            "type": "text/javascript"
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
           }
         }
       ],
       "id": "4e654fcd-9b11-4b40-9c51-2288eecdafab",
       "request": {
         "method": "POST",
+        "header": [],
         "body": {
           "mode": "raw",
-          "raw": "",
+          "raw": "{\r\n  \"name\": \"Барсик\",\r\n  \"species\": \"Кот\",\r\n  \"age\": 3\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -100,7 +111,8 @@
             "animals"
           ]
         }
-      }
+      },
+      "response": []
     }
   ]
 }
